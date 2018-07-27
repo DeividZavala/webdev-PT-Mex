@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;  
+}
+
+div {
+    width: 50%;
+    display: inline-block;
+}
+
+.perro{
+    background-color: rgb(244, 67, 54);
+}
+
+#unico{
+    background-color: #464674;
+}
