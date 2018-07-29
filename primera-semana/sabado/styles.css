@@ -1,0 +1,26 @@
+nav{
+    float: right;
+}
+
+ul li{
+    float: left;
+}
+
+.profile-pic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.logo-container img{
+    display: block;
+    margin: 0 auto;
+}
+
+.center-text{
+    text-align: center;
+}
+
+main{
+    clear: both;
+}
