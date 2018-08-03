@@ -127,8 +127,34 @@ main .container{
 }
 
 .card-info button{
+    display: block;
+    margin: 0 auto;
     padding: 3% 5%;
     border: none;
     background-color: #F44336;
     color: white;
+    animation: palpitar 3s ease 0s infinite;
+}
+
+@keyframes palpitar{
+
+    0%{
+
+        transform: scale(1);
+        background-color: #F44336;
+
+    }
+
+    50%{
+        transform: scale(2);
+        background-color: green;
+    }
+
+    100%{
+
+        transform: scale(1);
+        background-color: blue;
+
+    }
+
 }
