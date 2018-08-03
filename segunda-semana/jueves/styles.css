@@ -29,7 +29,7 @@ main{
     min-height: calc(100vh - 60px);
 }
 
-main section.background{
+main section.background, article.background{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -38,4 +38,19 @@ main section.background{
 main .background-image{
     background-image: url("https://cartrdge-east.s3.amazonaws.com/uploads/post/image/e0eb3a8e-e2e8-4f17-84fc-ad3bff6b49f1/emek-can-ozben-emek-can-ozben-lowpolystylizedenvironment-screenshot-5.jpg");
     height: 200px;
+    position: relative;
+}
+
+main section:first-child article{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+main .profile-image{
+    background-image: url("https://img.clipartxtras.com/02b9820c2f489996f4084740461a3547_low-poly-drawing_626-793.jpeg");
+    position: absolute;
+    bottom: -25px;
+    left: 10%;
+    border-radius: 50%;
 }
