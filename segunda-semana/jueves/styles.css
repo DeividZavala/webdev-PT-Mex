@@ -3,6 +3,7 @@
     padding: 0;  
 }
 
+/* header */
 header{
     background-color: #D32F2F;
     color: white;
@@ -20,4 +21,21 @@ header ul > li{
     float: left;
     padding: 11% 5%;
 
+}
+
+
+/* main */
+main{
+    min-height: calc(100vh - 60px);
+}
+
+main section.background{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .background-image{
+    background-image: url("https://cartrdge-east.s3.amazonaws.com/uploads/post/image/e0eb3a8e-e2e8-4f17-84fc-ad3bff6b49f1/emek-can-ozben-emek-can-ozben-lowpolystylizedenvironment-screenshot-5.jpg");
+    height: 200px;
 }
