@@ -1,6 +1,7 @@
 * {
     margin: 0;
-    padding: 0;  
+    padding: 0;
+    box-sizing: border-box; 
 }
 
 
@@ -36,7 +37,13 @@ header ul{
 header ul > li{
     float: left;
     padding: 11% 5%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all .3s;
+    cursor: pointer;
+}
 
+header ul > li:hover{
+    background-color: rgba(0, 0, 0, .7);
 }
 
 
@@ -72,7 +79,6 @@ main .profile-image{
 }
 
 main section:nth-child(2){
-    background: red;
     height: 400px;
 }
 
@@ -88,9 +94,41 @@ main .container{
 .card-container{
     width: 25%;
     height: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
 }
 
 .card-container .card-image{
+    position: relative;
     height: 60%;
     background-image: url("https://semantic-ui.com/images/avatar/large/elliot.jpg");
+}
+
+.card-image .overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    padding: 36%;
+}
+
+.card-image:hover > .overlay{
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-info{
+    padding: 20%;
+}
+
+.card-info button{
+    padding: 3% 5%;
+    border: none;
+    background-color: #F44336;
+    color: white;
 }
