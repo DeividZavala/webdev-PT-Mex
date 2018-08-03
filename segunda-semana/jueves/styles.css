@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;  
+}
+
+header{
+    background-color: #D32F2F;
+    color: white;
+    height: 60px;
+    width: 100%;
+}
+
+header ul{
+    list-style: none;
+    float: right;
+    width: 20%;
+}
+
+header ul > li{
+    float: left;
+    padding: 11% 5%;
+
+}
