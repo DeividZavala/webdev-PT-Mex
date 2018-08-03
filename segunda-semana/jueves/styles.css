@@ -3,6 +3,22 @@
     padding: 0;  
 }
 
+
+/* clases de ayuda */
+
+.margin-small-top{
+    margin-top: 20px;
+}
+
+.margin-medium-top{
+    margin-top: 50px;
+}
+
+.margin-small-bottom{
+    margin-bottom: 20px;
+}
+
+
 /* header */
 header{
     background-color: #D32F2F;
@@ -29,7 +45,7 @@ main{
     min-height: calc(100vh - 60px);
 }
 
-main section.background, article.background{
+main section.background, article.background, div.background{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -53,4 +69,28 @@ main .profile-image{
     bottom: -25px;
     left: 10%;
     border-radius: 50%;
+}
+
+main section:nth-child(2){
+    background: red;
+    height: 400px;
+}
+
+main .container{
+    width: 100%;
+    height: 100%;
+    margin: 0 3%;
+}
+
+
+/* Card */
+
+.card-container{
+    width: 25%;
+    height: 100%;
+}
+
+.card-container .card-image{
+    height: 60%;
+    background-image: url("https://semantic-ui.com/images/avatar/large/elliot.jpg");
 }
