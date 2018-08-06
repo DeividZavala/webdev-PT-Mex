@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    width: 100%;
+    background-color: red;
+}
+
+
+header nav{
+    display: flex;
+    height: 350px;
+    justify-content: sp;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    width: 35%;
+    flex-direction: column;
+}
+
+header nav ul li{
+    width: 25%;
+    padding: 5% 2%;
+
+}
+
+
+@media (min-width: 500px){
+
+    header{
+        background-color: blueviolet;
+    }
+
+    .container{
+
+    }
+
+
+    div{
+
+    }
+
+    div:hover{
+
+    }
+
+
+
+}
+
+
+/* Maximo 700 px de viewport */
+
+/*@media (max-width: 700px){
+    
+    header{
+        background-color: green;
+    }
+
+}
+
+@media (max-width: 450px){
+
+    header{
+        background-color: blue;
+    }
+
+}*/
