@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+        <div id="modal">
+                <div class="form">
+                    <div id="close" >x</div>
+                </div>
+            </div>
+
+
+
+    <a href="" id="primero">Anchor 1</a>
+    <a href="">Anchor 2</a>
+    <a href="">Anchor 3</a>
+
+    <input type="text" id="input">
+    <button id="submit">Picale</button>
+
+
+    <div class="div"></div>
+
+    <div id="perro" style="width: 100%; height: 40px;background-color: red"></div>
+
+
+    
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script>
+
+    $(document).ready(function (){
+
+
+        $("#perro").click(function(){
+            console.log("perro")
+        })
+
+        /*var anchors = $("a");
+
+        var div = $(".div");
+
+        var perro = $("#perro")
+
+        var primero = anchors[0];        
+
+        $("a").click(function(e){
+            console.log("Epale espale me estan picando", e)
+        })
+
+        
+        $("#submit").click(function(){
+            var val = $("#input").val();
+            console.log(val);
+        })
+
+        $("#primero").attr("href", "https://facebook.com")
+
+        $("#perro").css("background-color", "blue")
+
+        $("#perro").addClass("active test")*/
+
+        
+    })
+
+    /*window.onload = function listo(){
+        alert("Ya estoy al 100");
+    }*/
+
+</script>
+
+</body>
+</html>
