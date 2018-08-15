@@ -41,7 +41,11 @@
 
 
         $("#perro").click(function(){
-            console.log("perro")
+            $("#modal").toggleClass("active")
+        })
+
+        $("#modal").click(function(){
+            $("#modal").toggleClass("active")
         })
 
         /*var anchors = $("a");

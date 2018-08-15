@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 #modal{
     position: fixed;
     width: 100%;
@@ -13,6 +14,7 @@
     align-items: center;
     visibility: hidden;
     opacity: 0;
+    transition: all .3s;
 }
 
 .form{
@@ -20,4 +22,9 @@
     height: 45%;
     background-color: white;
     border-radius: 5px;
+}
+
+.active{
+    visibility: visible !important;
+    opacity: 1 !important;
 }
