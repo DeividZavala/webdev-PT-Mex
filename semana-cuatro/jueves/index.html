@@ -26,6 +26,14 @@
             </div>
         </nav>
     </header>
+
+
+    <form action="" id="form">
+        <label for="">
+            <input type="text" name="username">
+        </label>
+        <button type="submit">Picale papa</button>
+    </form>
     
 
 
@@ -37,11 +45,12 @@
 <script>
 
     $("#user").click(function(){
-        if($(".submenu").css("display") === "none"){
-            $(".submenu").show(400);
-            return
-        }
-        $(".submenu").hide(400);
+        $(".submenu").fadeToggle(400);
+    })
+
+    $("#form").submit(function(e){
+        e.preventDefault();
+        console.log("hola mi nombre es " + $("input[name='username']").val())
     })
 
 </script>
