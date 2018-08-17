@@ -27,6 +27,7 @@ div.submenu{
     display: inline-block;
     position: absolute;
     right: 10px;
+    width: 12%;
     border: 1px solid grey;
 }
 

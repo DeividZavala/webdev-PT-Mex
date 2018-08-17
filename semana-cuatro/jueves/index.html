@@ -12,7 +12,7 @@
     <header>
         <nav>
             <ul class="menu">
-                <li>
+                <li id="user">
                     David
                 </li>
             </ul>
@@ -33,5 +33,18 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+
+<script>
+
+    $("#user").click(function(){
+        if($(".submenu").css("display") === "none"){
+            $(".submenu").show(400);
+            return
+        }
+        $(".submenu").hide(400);
+    })
+
+</script>
+
 </body>
 </html>
