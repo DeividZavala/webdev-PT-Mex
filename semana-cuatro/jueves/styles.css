@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #F44336;
+    height: 60px;
+}
+
+ul.menu{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    color: white;
+}
+ul.menu li{
+    padding: 2% 3%
+}
+
+nav{
+    position: relative;
+}
+
+div.submenu{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    border: 1px solid grey;
+}
+
+.submenu ul{
+    list-style: none;
+}
+
+.submenu ul li{
+    padding: 5% 10%;
+}
