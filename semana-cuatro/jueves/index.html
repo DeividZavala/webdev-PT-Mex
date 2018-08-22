@@ -34,6 +34,10 @@
         </label>
         <button type="submit">Picale papa</button>
     </form>
+
+
+    <button id="button">test</button>
+    <button id="btn2">perro</button>
     
 
 
@@ -44,13 +48,28 @@
 
 <script>
 
-    $("#user").click(function(){
-        $(".submenu").fadeToggle(400);
-    })
+    $(document).ready(function(){
+        $("#user").click(function(){
+            $(".submenu").fadeToggle(400);
+        })
 
-    $("#form").submit(function(e){
-        e.preventDefault();
-        console.log("hola mi nombre es " + $("input[name='username']").val())
+        $("#form").submit(function(e){
+            e.preventDefault();
+            console.log("hola mi nombre es " + $("input[name='username']").val())
+        })
+
+        var z = 1;
+
+        $('#button').on('click', function() {
+            z++;
+            alert(z);
+        });
+
+        $("#btn2").click(function(){
+            console.log(z);
+        })
+
+        console.log(z);
     })
 
 </script>
