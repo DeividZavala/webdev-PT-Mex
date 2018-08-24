@@ -1,6 +1,10 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
+var sonido = new Audio();
+sonido.src = "./mario_papud.mp3";
+sonido.loop = true;
+
 /*var image = new Image();
 image.src = "https://bit.ly/2L7yH3f";
 
@@ -46,6 +50,18 @@ class Background{
         this.height = canvas.height;
         this.image = new Image();
         this.image.src = "https://bit.ly/2m9qY9Q";
+    }
+
+    gameOver(){
+
+        sonido.pause();
+
+        clearInterval(interval);
+
+        ctx.font = "40px Avenir";
+
+        ctx.fillText("GameOver", 115, 100);
+
     }
 
     draw(){
@@ -94,6 +110,9 @@ addEventListener("keydown", function(e){
     if(e.keyCode === 32){
         mario.y -= 80;
     }
+    if(e.keyCode === 13){
+        sonido.play();
+    }
 })
 
 var enemies = [];
@@ -109,7 +128,8 @@ function drawEnemies(){
     enemies.forEach(function(enemy){
         enemy.draw();
         if(mario.collision(enemy)){
-            
+            fondo.gameOver();
         }
     })
 }
+
