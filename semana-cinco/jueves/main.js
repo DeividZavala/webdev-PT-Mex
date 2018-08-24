@@ -12,9 +12,9 @@ class Mario{
 
     constructor(){
         this.x = 20;
-        this.y = 20;
-        this.width = 30;
-        this.height = 40;
+        this.y = 133;
+        this.width = 25;
+        this.height = 35;
         this.image1 = new Image();
         this.image1.src = "https://bit.ly/2L7yH3f";
         this.image2 = new Image();
@@ -23,21 +23,49 @@ class Mario{
     }
 
     draw(){
+        if(this.y < 133) this.y += 4;
         if(frames % 10 === 0 ) this.image = this.image === this.image1 ? this.image2 : this.image1;
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
     }
 
 }
 
-var mario = new Mario();
 
-/*mario.image.onload = function(){
-    mario.draw();
-}*/
+class Background{
+    constructor(){
+        this.x = 0;
+        this.y = 0;
+        this.width = canvas.width;
+        this.height = canvas.height;
+        this.image = new Image();
+        this.image.src = "https://bit.ly/2m9qY9Q";
+    }
+
+    draw(){
+        this.x--;
+        if(this.x < -canvas.width) this.x = 0;
+        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+        ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
+    }
+
+}
+
+
+var mario = new Mario();
+var fondo = new Background();
+
 
 var frames = 0;
 setInterval(function(){
     frames++;
     ctx.clearRect(0,0, 400, 200);
+    fondo.draw();
     mario.draw();
 }, 1000/60);
+
+
+addEventListener("keydown", function(e){
+    if(e.keyCode === 32){
+        mario.y -= 80;
+    }
+})
