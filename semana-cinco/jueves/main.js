@@ -22,6 +22,13 @@ class Mario{
         this.image = this.image1;
     }
 
+    collision(item){
+        return (this.x < item.x + item.width) &&
+            (this.x + this.width > item.x) &&
+            (this.y < item.y + item.height) &&
+            (this.y + this.height > item.y);
+    }
+
     draw(){
         if(this.y < 133) this.y += 4;
         if(frames % 10 === 0 ) this.image = this.image === this.image1 ? this.image2 : this.image1;
@@ -51,16 +58,35 @@ class Background{
 }
 
 
+class Enemy{
+    constructor(){
+        this.x = canvas.width;
+        this.y = 133;
+        this.width = 25;
+        this.height = 35;
+        this.image1 = new Image();
+        this.image1.src = "https://bit.ly/2upxkWp";
+    }
+
+    draw(){
+        if(frames % 10 === 0) this.x -= 15;
+        ctx.drawImage(this.image1, this.x, this.y, this.width, this.height)
+    }
+}
+
+
 var mario = new Mario();
 var fondo = new Background();
 
 
 var frames = 0;
-setInterval(function(){
+var interval = setInterval(function(){
     frames++;
     ctx.clearRect(0,0, 400, 200);
     fondo.draw();
     mario.draw();
+    generateEnemies();
+    drawEnemies();
 }, 1000/60);
 
 
@@ -69,3 +95,21 @@ addEventListener("keydown", function(e){
         mario.y -= 80;
     }
 })
+
+var enemies = [];
+
+function generateEnemies(){
+    if(frames % 100 === 0 || frames % 70 === 0 || frames % 170 === 0){
+        let enemy = new Enemy();
+        enemies.push(enemy)
+    }
+}
+
+function drawEnemies(){
+    enemies.forEach(function(enemy){
+        enemy.draw();
+        if(mario.collision(enemy)){
+            
+        }
+    })
+}
