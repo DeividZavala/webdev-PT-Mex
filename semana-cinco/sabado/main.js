@@ -86,13 +86,22 @@ function update(){
     flappy.draw();
     generatePipes();
     drawPipes();
+    poinsts();
+}
+
+function gameOver(){
+    clearInterval(interval);
+    interval = undefined;
+    ctx.font = "30px Avenir"
+    ctx.fillText("Ya fuiste", 250, 200)
+    ctx.fillText("Picale R para reiniciar", 250, 240);
 }
 
 function drawPipes(){
     pipes.forEach((pipe)=>{
         pipe.draw();
         if(flappy.collision(pipe)){
-            clearInterval(interval);
+            gameOver();
         }
     })
 }
@@ -106,13 +115,24 @@ function generatePipes(){
     pipes.push(pipe2);
 }
 
-function restart(){
+function poinsts(){
+    ctx.font = "30px Avenir";
+    ctx.fillText(Math.round(frames/60), 550, 40);
+}
 
+function restart(){
+    if(interval !== undefined) return;
+    pipes = [];
+    frames = 0;
+    start();
 }
 
 addEventListener("keydown", function(e){
     if(e.keyCode === 32){
         flappy.y -= 60;
+    }
+    if(e.keyCode === 82){
+        restart();
     }
 })
 
