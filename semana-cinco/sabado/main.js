@@ -79,7 +79,7 @@ function restart(){
 
 }
 
-addEventListener("keypress", function(e){
+addEventListener("keydown", function(e){
     if(e.keyCode === 32){
         flappy.y -= 80;
     }
