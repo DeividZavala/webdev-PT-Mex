@@ -37,6 +37,13 @@ class Flappy{
         this.image.src = "./images/flappy.png"
     }
 
+    collision(item){
+        return (this.x < item.x + item.width) &&
+            (this.x + this.width > item.x) &&
+            (this.y < item.y + item.height) &&
+            (this.y + this.height > item.y);
+    }
+
     draw(){
         if(this.y < canvas.height - this.height) this.y += gravity;
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
@@ -84,11 +91,14 @@ function update(){
 function drawPipes(){
     pipes.forEach((pipe)=>{
         pipe.draw();
+        if(flappy.collision(pipe)){
+            clearInterval(interval);
+        }
     })
 }
 
 function generatePipes(){
-    if(!(frames % 100 === 0)) return;
+    if(!(frames % 110 === 0)) return;
     var height = Math.floor((Math.random()* canvas.height * .55) + 40);
     var pipe1 = new Pipe("top", 0, height);
     var pipe2 = new Pipe(null, pipe1.height + 120,  canvas.height - pipe1.height - 120)
@@ -102,7 +112,7 @@ function restart(){
 
 addEventListener("keydown", function(e){
     if(e.keyCode === 32){
-        flappy.y -= 80;
+        flappy.y -= 60;
     }
 })
 
