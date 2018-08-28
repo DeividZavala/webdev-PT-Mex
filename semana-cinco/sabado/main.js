@@ -98,7 +98,8 @@ function gameOver(){
 }
 
 function drawPipes(){
-    pipes.forEach((pipe)=>{
+    pipes.forEach((pipe,index)=>{
+        if(pipe.x < -canvas.width - pipe.width) return pipes.splice(index,2);
         pipe.draw();
         if(flappy.collision(pipe)){
             gameOver();
