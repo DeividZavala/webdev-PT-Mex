@@ -1,0 +1,31 @@
+
+{{> playerCard}}
+
+<h1>Esto se ve si o si</h1>
+
+
+{{#if username}}
+    <h1>Esto esta jalando {{username}}</h1>
+{{else}}
+    <h1>No esta el username</h1>
+{{/if}}
+
+{{#unless username}}
+    <h1>bloque unless</h1>
+{{/unless}}
+
+<ul>
+    {{#each foods as |food| }}
+        <li>{{@index}}.- {{food}}</li>
+    {{/each}}
+</ul>
+
+<ul>
+    {{#each user as |props| }}
+        <li>{{@key}}: {{props}}</li>
+    {{/each}}
+</ul>
+
+<script>
+    console.log("{{username}}");
+</script>
