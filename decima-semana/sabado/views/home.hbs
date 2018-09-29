@@ -2,6 +2,8 @@
 
 <ul>
     {{#each movies}}
-        <li>{{this.title}}</li>
+        <li>{{this.title}} {{this.year}}</li>
     {{/each}}
 </ul>
+
+{{> movieForm}}

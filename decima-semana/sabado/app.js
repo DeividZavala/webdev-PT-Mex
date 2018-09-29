@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const hbs = require('hbs');
 
 // Modelos
 const Movie = require('./models/Movie');
@@ -13,11 +14,14 @@ mongoose.connect('mongodb://localhost:27017/video', {useNewUrlParser: true})
 app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
 
+hbs.registerPartials(__dirname+'/views/partials');
+
 app.get('/', (req, res) => {
         Movie.find().limit(20)
             .then(movies => {
                 res.render('home', {movies});
-            });
+            })
+            .catch(err => res.json(err));
 });
 
 
