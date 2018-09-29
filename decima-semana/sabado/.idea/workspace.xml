@@ -42,7 +42,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="hbs" value="348" />
-          <entry key="js" value="2978" />
+          <entry key="js" value="3120" />
           <entry key="json" value="68" />
         </counts>
       </usages-collector>
@@ -50,7 +50,7 @@
         <counts>
           <entry key="Handlebars/Mustache" value="348" />
           <entry key="JSON" value="68" />
-          <entry key="JavaScript" value="2978" />
+          <entry key="JavaScript" value="3120" />
         </counts>
       </usages-collector>
     </session>
@@ -66,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+            <state relative-caret-position="486">
+              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -241,12 +241,12 @@
       <workItem from="1538236356638" duration="3577000" />
       <workItem from="1538253008809" duration="76000" />
       <workItem from="1538253096296" duration="348000" />
-      <workItem from="1538253470594" duration="7519000" />
+      <workItem from="1538253470594" duration="7984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11520000" />
+    <option name="totallyTimeSpent" value="11985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -340,8 +340,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        <state relative-caret-position="486">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
         </state>
       </provider>
     </entry>

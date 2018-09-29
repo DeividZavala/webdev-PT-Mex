@@ -23,7 +23,16 @@ hbs.registerPartials(__dirname+'/views/partials');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.use(perro);
+
+function perro(req, res, next){
+    console.log("Middleware papi");
+    req.midato = "perrito";
+    next();
+}
+
 app.get('/', (req, res) => {
+        console.log(req.midato);
         Movie.find().limit(20)
             .then(movies => {
                 res.render('home', {movies});
