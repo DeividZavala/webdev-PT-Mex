@@ -20,6 +20,9 @@ app.set("view engine", "hbs");
 
 hbs.registerPartials(__dirname+'/views/partials');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 app.get('/', (req, res) => {
         Movie.find().limit(20)
             .then(movies => {
@@ -29,7 +32,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/movies', (req, res) => {
-
+    console.log(req.body);
+    res.json(req.body);
 });
 
 
