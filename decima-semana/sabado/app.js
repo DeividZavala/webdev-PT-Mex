@@ -32,8 +32,10 @@ app.get('/', (req, res) => {
 });
 
 app.post('/movies', (req, res) => {
-    console.log(req.body);
-    res.json(req.body);
+    Movie.create(req.body)
+        .then(movie => {
+            res.redirect('/')
+        })
 });
 
 
