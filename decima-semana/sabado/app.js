@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const hbs = require('hbs');
+const bodyParser = require('body-parser');
+const logger = require('morgan');
 
 // Modelos
 const Movie = require('./models/Movie');
@@ -10,6 +12,8 @@ mongoose.connect('mongodb://localhost:27017/video', {useNewUrlParser: true})
     .then(() => {
         console.log("Conectado a la DB");
 });
+
+app.use(logger('dev'));
 
 app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
@@ -22,6 +26,10 @@ app.get('/', (req, res) => {
                 res.render('home', {movies});
             })
             .catch(err => res.json(err));
+});
+
+app.post('/movies', (req, res) => {
+
 });
 
 
