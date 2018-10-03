@@ -14,4 +14,11 @@ router.get('/books', (req, res) => {
       })
 });
 
+router.get('/books/:id', (req, res) => {
+  Book.findById(req.params.id)
+      .then(book => {
+        res.render("bookDetail", {header: book.title, book})
+      })
+});
+
 module.exports = router;
