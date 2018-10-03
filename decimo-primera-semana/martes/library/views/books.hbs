@@ -1,0 +1,13 @@
+<h1>{{header}}</h1>
+
+{{#if books}}
+    <ul>
+        {{#each books as |book| }}
+            <li>
+                <a href="/books/{{book._id}}">{{book.title}}</a>
+            </li>
+        {{/each}}
+    </ul>
+{{else}}
+    <p>No hay libros morro</p>
+{{/if}}
