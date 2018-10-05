@@ -20,6 +20,13 @@ router.get("/books/add", (req, res) => {
     res.render("create-book", {header: "Crear libro"})
 });
 
+router.post("/books/add", (req, res) => {
+    Book.create(req.body)
+        .then(() => {
+            res.redirect("/books");
+        })
+});
+
 
 // Mostrar el detalle del libro
 router.get('/books/:id', (req, res) => {
