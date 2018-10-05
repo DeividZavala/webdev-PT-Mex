@@ -46,11 +46,15 @@ router.post("/books/add", (req, res) => {
 
 // Mostrar el detalle del libro
 router.get('/books/:id', (req, res) => {
-  Book.findById(req.params.id)
-      .populate("author")
-      .then(book => {
-        res.render("bookDetail", {header: book.title, book})
-      })
+    Author.find()
+        .then(authors => {
+            Book.findById(req.params.id)
+                .populate("author")
+                .then(book => {
+                    res.render("bookDetail", {header: book.title, book, authors})
+                })
+        });
+
 });
 
 router.post('/books/:id', (req, res) => {
