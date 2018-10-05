@@ -36,4 +36,11 @@ router.get('/books/:id', (req, res) => {
       })
 });
 
+router.post('/books/:id', (req, res) => {
+    Book.findByIdAndUpdate(req.params.id, {$set: req.body})
+        .then(book => {
+            res.redirect(`/books/${book._id}`);
+        })
+});
+
 module.exports = router;
