@@ -1,10 +1,25 @@
 const express = require('express');
 const router  = express.Router();
 const Book = require('../models/Book');
+const Author = require('../models/Author');
 
 /* GET home page */
 router.get('/', (req, res, next) => {
   res.render('index');
+});
+
+router.get('/authors', (req, res) => {
+    Author.find()
+        .then(authors => {
+            res.render('authors', {header:"Lista de autores" ,authors});
+        })
+});
+
+router.post('/authors', (req, res) => {
+    Author.create(req.body)
+        .then(() => {
+            res.redirect('/authors')
+        })
 });
 
 // Mostramos los libros
