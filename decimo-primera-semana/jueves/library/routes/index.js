@@ -26,6 +26,7 @@ router.post('/authors', (req, res) => {
 router.get('/books', (req, res) => {
   Book.find()
       .then(books => {
+          console.log(books[0]);
           res.render('books', {header: "Books", books})
       })
 });
@@ -46,6 +47,7 @@ router.post("/books/add", (req, res) => {
 // Mostrar el detalle del libro
 router.get('/books/:id', (req, res) => {
   Book.findById(req.params.id)
+      .populate("author")
       .then(book => {
         res.render("bookDetail", {header: book.title, book})
       })

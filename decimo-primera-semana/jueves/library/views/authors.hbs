@@ -1,3 +1,9 @@
 <h1>{{header}}</h1>
 
+<ul>
+    {{#each authors as |author|}}
+        <li>{{author.name}} {{author.lastname}}</li>
+    {{/each}}
+</ul>
+
 {{> authorForm }}
