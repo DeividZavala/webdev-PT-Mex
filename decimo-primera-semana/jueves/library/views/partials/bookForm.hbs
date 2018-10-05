@@ -10,13 +10,19 @@
     <input type="text" name="title" value="{{book.title}}">
 
     <label for="">Author:</label>
-    <input type="text" name="author">
+    <input type="text" name="author" value="{{book.author}}">
 
     <label for="">Description:</label>
-    <input type="text" name="description">
+    <input type="text" name="description" value="{{book.description}}">
 
     <label for="">Rate:</label>
-    <input type="number" name="rating">
+    <input type="number" name="rating" value="{{book.rating}}">
 
-    <button type="submit">ADD</button>
+    <button type="submit">
+        {{#if book}}
+            Editar
+        {{else}}
+            Agregar
+        {{/if}}
+    </button>
 </form>
