@@ -9,6 +9,7 @@ const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
 const passport     = require('./helpers/passport');
+const session      = require('express-session');
 
 
 mongoose
@@ -24,6 +25,12 @@ const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
 
 const app = express();
+
+app.use(session({
+    secret: process.env.SECRET,
+    resave: true,
+    saveUninitialized: true
+}));
 
 app.use(passport.initialize());
 app.use(passport.session());
