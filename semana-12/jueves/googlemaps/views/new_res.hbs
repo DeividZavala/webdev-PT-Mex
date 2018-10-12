@@ -1,0 +1,43 @@
+<form action="/new" method="POST">
+    <label for="">
+        Nombre:
+        <input type="text" name="name">
+    </label>
+    <label for="">
+        Descripcion:
+        <input type="text" name="desc">
+    </label>
+
+    <label for="">
+        Lugar:
+        <input type="text" id="autocomplete">
+    </label>
+
+    <label for="">
+        Lat:
+        <input type="text" id="lat" name="lat">
+    </label>
+    <label for="">
+        Lng:
+        <input type="text" id="lng" name="lng">
+    </label>
+
+    <button type="submit">Picale papa</button>
+</form>
+
+<script>
+    window.onload = function (){
+        const input = document.getElementById("autocomplete");
+        const lat = document.getElementById("lat");
+        const lng = document.getElementById("lng");
+
+        const dropdown = new google.maps.places.Autocomplete(input);
+        dropdown.addListener("place_changed", () => {
+            console.log(dropdown.getPlace());
+            let place = dropdown.getPlace();
+            lat.value = place.geometry.location.lat();
+            lng.value = place.geometry.location.lng();
+        })
+    }
+
+</script>

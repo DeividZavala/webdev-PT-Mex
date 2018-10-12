@@ -10,4 +10,12 @@ router.get("/maps", (req, res) => {
   res.render("maps");
 });
 
+router.get("/new", (req, res) => {
+  res.render("new_res");
+});
+
+router.post("/new", (req, res) => {
+  console.log(req.body);
+});
+
 module.exports = router;
