@@ -13,18 +13,44 @@
             document.getElementById("map"), {
                     zoom: 15,
                     center:{
-                        lat: 19.3978505,
-                        lng: -99.1717396
+                        lat: 41.3977381,
+                        lng: 2.190471916
                     }
                 });
 
         const marker = new google.maps.Marker({
             position:{
-                lat: 19.3978505,
-                lng: -99.1717396
+                lat: 41.3977381,
+                lng: 2.190471916
+            },
+            animation: google.maps.Animation.BOUNCE,
+            icon: {
+              url: "http://www.pngpix.com/wp-content/uploads/2016/07/PNGPIX-COM-Pepsi-Icon-Logo-PNG-Transparent-500x488.png",
+              scaledSize: new google.maps.Size(50, 50), // scaled size
             },
             map,
             title: "Aquien andan aprendiendo cosas bien pro"
-        })
+        });
+
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(position){
+                const user_location = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                console.log(position);
+
+                map.setCenter(user_location);
+                marker.setPosition(user_location);
+
+            },function(err){
+                console.log(err)
+            })
+        }else{
+            console.log("perro no soporta")
+        }
+
+
     }
 </script>
