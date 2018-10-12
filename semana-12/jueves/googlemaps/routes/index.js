@@ -4,7 +4,10 @@ const Restaurant = require("../models/Restaurant");
 
 /* GET home page */
 router.get('/', (req, res, next) => {
-  res.render('index');
+  Restaurant.find()
+      .then(restaurants =>{
+          res.render('index',{restaurants});
+      })
 });
 
 router.get("/maps", (req, res) => {
@@ -18,8 +21,8 @@ router.get("/new", (req, res) => {
 router.post("/new", (req, res) => {
   const {name, desc, lat, lng} = req.body;
   let coordinates = [];
-    coordinates.push(lat);
     coordinates.push(lng);
+    coordinates.push(lat);
   let restaurant = {
     name,
     desc,
