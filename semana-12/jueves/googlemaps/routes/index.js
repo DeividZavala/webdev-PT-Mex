@@ -1,5 +1,6 @@
 const express = require('express');
 const router  = express.Router();
+const Restaurant = require("../models/Restaurant");
 
 /* GET home page */
 router.get('/', (req, res, next) => {
@@ -15,7 +16,22 @@ router.get("/new", (req, res) => {
 });
 
 router.post("/new", (req, res) => {
-  console.log(req.body);
+  const {name, desc, lat, lng} = req.body;
+  let coordinates = [];
+    coordinates.push(lat);
+    coordinates.push(lng);
+  let restaurant = {
+    name,
+    desc,
+    location:{
+      coordinates
+    }
+  };
+
+    Restaurant.create(restaurant)
+        .then(()=>{
+          res.redirect("/")
+        })
 });
 
 module.exports = router;

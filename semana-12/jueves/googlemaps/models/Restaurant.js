@@ -13,6 +13,6 @@ const restaurantSchema = new Schema({
     }
 });
 
-restaurantSchema.index(location,"2dsphere");
+restaurantSchema.index({location:"2dsphere"});
 
 module.exports = mongoose.model("Restaurant", restaurantSchema);

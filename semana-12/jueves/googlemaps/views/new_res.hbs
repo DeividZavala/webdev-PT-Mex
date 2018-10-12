@@ -1,7 +1,7 @@
 <form action="/new" method="POST">
     <label for="">
         Nombre:
-        <input type="text" name="name">
+        <input type="text" name="name" id="name">
     </label>
     <label for="">
         Descripcion:
@@ -30,6 +30,7 @@
         const input = document.getElementById("autocomplete");
         const lat = document.getElementById("lat");
         const lng = document.getElementById("lng");
+        const name = document.getElementById("name");
 
         const dropdown = new google.maps.places.Autocomplete(input);
         dropdown.addListener("place_changed", () => {
@@ -37,6 +38,7 @@
             let place = dropdown.getPlace();
             lat.value = place.geometry.location.lat();
             lng.value = place.geometry.location.lng();
+            name.value = place.name;
         })
     }
 
