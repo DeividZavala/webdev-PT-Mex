@@ -1,7 +1,7 @@
 <style>
     #map{
         width: 100%;
-        height: 400px;
+        height: 600px;
     }
 </style>
 
@@ -43,6 +43,26 @@
 
                 map.setCenter(user_location);
                 marker.setPosition(user_location);
+
+                const directionService = new google.maps.DirectionsService;
+                const directionDisplay = new google.maps.DirectionsRenderer
+
+                const directionRequest = {
+                    origin: user_location,
+                    destination: {
+                        lat: 19.4270245,
+                        lng: -99.16766469999999
+                    },
+                    travelMode: "DRIVING"
+                };
+
+                directionService.route(directionRequest,function (res, status){
+                    if(status === "OK"){
+                        directionDisplay.setDirections(res)
+                    }
+                });
+
+                directionDisplay.setMap(map);
 
             },function(err){
                 console.log(err)
