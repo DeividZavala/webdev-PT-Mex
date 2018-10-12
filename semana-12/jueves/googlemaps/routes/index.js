@@ -37,4 +37,11 @@ router.post("/new", (req, res) => {
         })
 });
 
+router.get("/:id", (req, res) =>{
+  Restaurant.findById(req.params.id)
+      .then(restaurant => {
+        res.render("detail",{restaurant});
+      })
+});
+
 module.exports = router;

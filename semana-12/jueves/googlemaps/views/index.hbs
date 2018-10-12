@@ -3,6 +3,35 @@
 
 <ul>
     {{#each restaurants}}
-        <li>{{this.name}}</li>
+        <li>
+            <a href="/{{this._id}}">{{this.name}}</a>
+        </li>
     {{/each}}
 </ul>
+
+<div id="res_map" style="width: 70%; height: 400px"></div>
+
+<script>
+
+    window.onload = function () {
+        const map = new google.maps.Map(document.getElementById("res_map"),{
+            zoom: 15,
+            center: {
+                lat: {{restaurants.[0].location.coordinates.[1]}},
+                lng: {{restaurants.[0].location.coordinates.[0]}}
+            }
+        });
+        let marker;
+        {{#each restaurants}}
+            marker = new google.maps.Marker({
+                position:{
+                    lat: {{this.location.coordinates.[1]}},
+                    lng: {{this.location.coordinates.[0]}}
+                },
+                map
+            });
+        {{/each}}
+
+    }
+
+</script>
