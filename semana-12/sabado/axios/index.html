@@ -35,7 +35,73 @@
     <ul id="list"></ul>
 
 
+    <canvas id="myChart"></canvas>
+
+
+
+    <form id="form" style="margin: 10% 0">
+    
+        <label for="">
+            name:
+            <input type="text" name="name">
+        </label>
+        <label for="">
+            wapon:
+            <input type="text" name="weapon">
+        </label>
+        <label for="">
+            occupation:
+            <input type="text" name="occupation">
+        </label>
+        <label for="">
+            debt:
+            <select name="debt" id="">
+                <option value="false">Nelson mandela</option>
+                <option value="true">Simona la mona</option>
+            </select>
+        </label>
+        
+        <button type="submit">picale</button>
+        
+    </form>
+
+    <form data-action="update" style="margin: 10% 0">
+    
+            <label for="">
+                name:
+                <input type="text" name="name">
+            </label>
+            <label for="">
+                wapon:
+                <input type="text" name="weapon">
+            </label>
+            <label for="">
+                occupation:
+                <input type="text" name="occupation">
+            </label>
+            <label for="">
+                debt:
+                <select name="debt" id="">
+                    <option value="false">Nelson mandela</option>
+                    <option value="true">Simona la mona</option>
+                </select>
+            </label>
+
+            <label for="">
+                id:
+                <input type="text" name="id">
+            </label>
+            
+            <button type="submit">picale</button>
+            
+        </form>
+
+
+    <ul id="char"></ul>
+
+
     <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>
