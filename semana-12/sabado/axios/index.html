@@ -6,11 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Axios</title>
 </head>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .perro{
+        width: 45%;
+        display: inline-block;
+    }
+    #list{
+        width: 50%;
+        display: inline-block;
+        overflow: scroll;
+        height: 200px;
+    }
+</style>
 <body>
 
-    <h1 id="name"></h1>
+    <div class="perro">
+            <h1 id="name"></h1>
 
-    <img src="" alt="">
+            <img src="" alt="">
+    </div>
+
+    <ul id="list"></ul>
 
 
     <script src="./node_modules/axios/dist/axios.min.js"></script>
