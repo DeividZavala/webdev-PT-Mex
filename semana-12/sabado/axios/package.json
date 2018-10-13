@@ -1,0 +1,14 @@
+{
+  "name": "testing-axios",
+  "version": "1.0.0",
+  "description": "testiando axios papa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Zavala",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
