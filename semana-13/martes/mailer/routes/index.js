@@ -4,7 +4,7 @@ const mailer = require("../helpers/mailer");
 
 /* GET home page */
 router.get('/', (req, res, next) => {
-  res.render('index');
+  res.render('form');
 });
 
 router.post("/", (req, res) => {
