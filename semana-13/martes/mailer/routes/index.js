@@ -9,6 +9,7 @@ router.get('/', (req, res, next) => {
 
 router.post("/", (req, res) => {
     let options = req.body;
+    options.filename = "verify";
     mailer.send(options)
         .then(()=>{
           res.status(200).send("el correo se mando")
