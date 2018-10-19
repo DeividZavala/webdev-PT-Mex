@@ -1,0 +1,26 @@
+<div class="uk-container uk-flex uk-flex-middle uk-flex-center">
+
+    <form class="uk-form-stacked" method="POST" action="/post/" enctype="multipart/form-data">
+
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-stacked-text">Cuenta algo</label>
+            <div class="uk-form-controls">
+                <textarea
+                        rows="5"
+                        class="uk-textarea"
+                        id="form-stacked-text"
+                        name="body"
+                        placeholder="Escribe algo de la foto"></textarea>
+            </div>
+        </div>
+
+        <div class="js-upload" uk-form-custom>
+            <input type="file" multiple name="photos">
+            <button class="uk-button uk-button-default" type="button" tabindex="-1">Selecciona un foto</button>
+        </div>
+
+        <button class="uk-button uk-button-primary" type="submit">Crear post</button>
+
+    </form>
+
+</div>
