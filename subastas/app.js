@@ -28,9 +28,8 @@ const app = express();
 
 app.use(session({
     secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: true }
+    resave: true,
+    saveUninitialized: true
 }));
 
 
@@ -66,8 +65,10 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 const index = require('./routes/index');
 const auth = require("./routes/auth");
+const bid = require("./routes/bid");
 app.use('/', index);
 app.use("/auth", auth);
+app.use("/bid", bid);
 
 
 module.exports = app;

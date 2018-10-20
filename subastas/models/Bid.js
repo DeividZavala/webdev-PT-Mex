@@ -5,12 +5,14 @@ const bidSchema = new Schema({
     owner: {
         type: Schema.Types.ObjectId,
         ref: "User",
-        required: true
+        required: "No hay propietario de la subasta"
     },
     winner: {
         type: Schema.Types.ObjectId,
         ref: "User",
     },
+    title: String,
+    description: String,
     end_date: Date,
     start_date: Date,
     leader: {

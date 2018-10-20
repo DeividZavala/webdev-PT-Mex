@@ -1,0 +1,41 @@
+<form action="/bid/new" method="post" >
+    <div>
+        <label for="">
+            Title:
+            <input type="text" name="title">
+        </label>
+    </div>
+
+    <div>
+        <label for="">
+            Description:
+            <textarea name="description" id="" cols="30" rows="3"></textarea>
+        </label>
+    </div>
+
+    <div>
+        <label for="">
+            End Date:
+            <input type="datetime-local" name="end-date">
+        </label>
+    </div>
+
+    <div>
+        <label for="">
+            Start Date:
+            <input type="datetime-local" name="start-date">
+        </label>
+    </div>
+
+    <div>
+        <label for="">
+            Fotos de la subasta:
+            <input type="file" name="photos" multiple>
+        </label>
+    </div>
+
+    <button type="submit">Crear subasta</button>
+    
+</form>
+
+<p style="color: red">{{err.message}}</p>

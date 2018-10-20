@@ -4,15 +4,16 @@ const passport = require("passport");
 const User = require("../models/User");
 
 router.get("/login", (req, res) => {
-
+    res.render("login");
 });
 
-router.post("/login",  passport.authenticate("local"),(req, res) => {
-
-});
+router.post("/login",  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/auth/login"
+}));
 
 router.get("/register", (req, res) =>{
-
+    res.render("register");
 });
 
 router.post("/register", (req, res) => {
@@ -25,6 +26,11 @@ router.post("/register", (req, res) => {
         .catch(err => {
             res.status(500).render("register",{err, msg:"No pudimos registrarte"})
         })
+});
+
+router.post("/logout", (req, res) => {
+    req.logout();
+    res.redirect("/auth/login");
 });
 
 module.exports = router;
