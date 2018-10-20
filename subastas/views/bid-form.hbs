@@ -1,29 +1,36 @@
-<form action="/bid/new" method="post" >
+<form
+        {{#if bid}}
+            action="/bid/{{bid._id}}"
+        {{else}}
+            action="/bid/new"
+        {{/if}}
+        method="post"
+>
     <div>
         <label for="">
             Title:
-            <input type="text" name="title">
+            <input type="text" name="title" value="{{bid.title}}">
         </label>
     </div>
 
     <div>
         <label for="">
             Description:
-            <textarea name="description" id="" cols="30" rows="3"></textarea>
+            <textarea name="description" id="" cols="30" rows="0">{{bid.description}}</textarea>
         </label>
     </div>
 
     <div>
         <label for="">
             End Date:
-            <input type="datetime-local" name="end-date">
+            <input type="datetime-local" name="end_date" value="{{bid.end_date}}">
         </label>
     </div>
 
     <div>
         <label for="">
             Start Date:
-            <input type="datetime-local" name="start-date">
+            <input type="datetime-local" name="start_date" value="{{bid.start_date}}">
         </label>
     </div>
 
