@@ -41,8 +41,10 @@ router.get("/:id/edit",isLoggedIn, checkIfOwner, (req, res) => {
 });
 
 // editando el post
-router.post("/:id/edit", isLoggedIn, checkIfOwner,(req, res) => {
-
+router.post("/:id/edit", isLoggedIn, checkIfOwner, upload.array("photos"),(req, res) => {
+    req.body.photos = req.files.map(file => {
+        return file.url;
+    });
     Bid.findByIdAndUpdate(req.params.id, {$set: req.body})
         .then(()=>{
             res.redirect("/bid")
