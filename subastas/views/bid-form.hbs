@@ -1,10 +1,11 @@
 <form
         {{#if bid}}
-            action="/bid/{{bid._id}}"
+            action="/bid/{{bid._id}}/edit"
         {{else}}
             action="/bid/new"
         {{/if}}
         method="post"
+        enctype="multipart/form-data"
 >
     <div>
         <label for="">

@@ -1,7 +1,8 @@
 <ul>
     {{#each bids}}
-        <a href="/bid/{{this._id}}">
-            <li>{{this.title}}</li>
+        <a href="/bid/{{this._id}}/edit">
+            <img src="{{this.photos.[0]}}" alt="" width="100" height="100">
+            <li>{{this.title}}</li> creado por {{this.owner.username}}
         </a>
     {{/each}}
 </ul>
