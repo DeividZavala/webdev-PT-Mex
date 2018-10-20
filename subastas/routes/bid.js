@@ -2,11 +2,12 @@ const express = require("express");
 const router = express.Router();
 const Bid = require("../models/Bid");
 const upload = require("../helpers/multer");
+const commonMiddlewares = require("../helpers/commonMiddlewares");
 
-function isLoggedIn(req, res, next){
+/*function isLoggedIn(req, res, next){
     if(req.isAuthenticated()) return next();
     res.redirect("/auth/login");
-}
+}*/
 
 function checkIfOwner(req, res, next){
     Bid.findById(req.params.id)
@@ -22,26 +23,25 @@ function checkIfOwner(req, res, next){
         });
 }
 
-router.get("/", isLoggedIn, (req, res) => {
+router.get("/", commonMiddlewares.isLoggedIn, (req, res) => {
     Bid.find()
         .populate("owner", "username")
         .then(bids => {
-            console.log(bids);
             res.render("bid-list", {bids})
         })
 });
 
-router.get("/new", isLoggedIn,(req, res) => {
+router.get("/new", commonMiddlewares.isLoggedIn,(req, res) => {
     res.render("bid-form");
 });
 
-router.get("/:id/edit",isLoggedIn, checkIfOwner, (req, res) => {
+router.get("/:id/edit",commonMiddlewares.isLoggedIn, checkIfOwner, (req, res) => {
     const {bid} = req;
     res.render("bid-form",{bid});
 });
 
 // editando el post
-router.post("/:id/edit", isLoggedIn, checkIfOwner, upload.array("photos"),(req, res) => {
+router.post("/:id/edit", commonMiddlewares.isLoggedIn, checkIfOwner, upload.array("photos"),(req, res) => {
     req.body.photos = req.files.map(file => {
         return file.url;
     });
@@ -51,7 +51,7 @@ router.post("/:id/edit", isLoggedIn, checkIfOwner, upload.array("photos"),(req, 
         })
 });
 
-router.post("/new", isLoggedIn, upload.array("photos"),(req, res) => {
+router.post("/new", commonMiddlewares.isLoggedIn, upload.array("photos"),(req, res) => {
     req.body.photos = req.files.map(file => {
         return file.url;
     });

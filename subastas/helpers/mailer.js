@@ -23,7 +23,7 @@ exports.send = (options) =>{
         to: options.email,
         from: `😡 ${options.subject} 😡<noreply@mijo.com>`,
         text: options.message,
-        html: `<h1>${options.subject}</h1>`
+        html: `<h1>${options.message}</h1>`
     };
     return transport.sendMail(mailOptions);
 };
