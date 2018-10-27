@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c102a182-aff8-4f6a-aa84-d0dc3463f848" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/helpers/multer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/feed.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/partials/post.hbs" afterDir="false" />
-    </list>
+    <list default="true" id="c102a182-aff8-4f6a-aa84-d0dc3463f848" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -21,7 +15,7 @@
     <session id="521788496">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.opened" value="2" />
         </counts>
@@ -290,18 +284,18 @@
       <option name="presentableId" value="Default" />
       <updated>1539901092965</updated>
       <workItem from="1539901094583" duration="4032000" />
-      <workItem from="1539908204666" duration="6218000" />
+      <workItem from="1539908204666" duration="6623000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10250000" />
+    <option name="totallyTimeSpent" value="10655000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16807166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2535771" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />

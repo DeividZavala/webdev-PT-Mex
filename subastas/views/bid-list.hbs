@@ -1,8 +1,44 @@
-<ul>
+<section class="container">
     {{#each bids}}
-        <a href="/bid/{{this._id}}/edit">
-            <img src="{{this.photos.[0]}}" alt="" width="100" height="100">
-            <li>{{this.title}}</li> creado por {{this.owner.username}}
-        </a>
+
+        <div class="bid-item">
+            <div>
+                <img src="{{this.photos.[0]}}" alt="" width="100" height="100">
+            </div>
+            <p>{{this.title}}</p>
+            <div>
+                descripción:
+                {{this.description}}
+            </div>
+            <h2>
+                Lider: {{#if this.leader}}
+                    {{this.leader.username}}
+                {{else}}
+                    Aun nadie le ha pujado
+                {{/if}}
+            </h2>
+            <button data-id="{{this._id}}" >Subastale</button>
+        </div>
+
     {{/each}}
-</ul>
+</section>
+
+<script>
+    addEventListener("click", (e) =>{
+        console.log(e.target.dataset.id);
+
+        if(!e.target.dataset.id) return;
+
+        let bid = {
+            item: e.target.dataset.id,
+            user: "{{user._id}}"
+        };
+        socket.emit("bid", bid);
+
+        socket.on("bid", function(bid){
+            let btn = document.querySelector(`[data-id="${bid.item}"]`);
+            btn.parentNode.children[3].innerHTML = `Lider: ${bid.user}`;
+        });
+
+    })
+</script>

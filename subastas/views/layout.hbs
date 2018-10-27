@@ -13,6 +13,12 @@
 
   {{{body}}}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+<script>
+    var socket = io();
+    socket.emit("connected");
+</script>
+
   <script src="/javascripts/script.js"></script>
 </body>
 </html>

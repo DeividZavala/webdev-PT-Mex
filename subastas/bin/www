@@ -23,6 +23,35 @@ app.use((err, req, res, next) => {
 
 let server = http.createServer(app);
 
+const io = require('socket.io')(server);
+// nos traemos la funcion;
+const bidController = require("../helpers/socket-io");
+
+io.on('connection', function(socket){
+    socket.on('disconnect', function(){
+        console.log('user disconnected');
+    });
+
+    socket.on("connected", () => {
+      console.log("conectado");
+    });
+
+    //subasta
+    socket.on('bid', function(bid){
+        bidController.update(bid)
+            .populate("leader", "username")
+            .then(bid => {
+                let updatedBid = {
+                  item: bid._id,
+                  user: bid.leader.username
+                };
+                io.emit('bid', updatedBid);
+            })
+
+    });
+
+});
+
 server.on('error', error => {
   if (error.syscall !== 'listen') { throw error }
 

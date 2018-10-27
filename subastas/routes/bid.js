@@ -24,10 +24,11 @@ function checkIfOwner(req, res, next){
 }
 
 router.get("/", commonMiddlewares.isLoggedIn, (req, res) => {
+    const {user} = req;
     Bid.find()
-        .populate("owner", "username")
+        .populate("owner leader", "username")
         .then(bids => {
-            res.render("bid-list", {bids})
+            res.render("bid-list", {bids, user})
         })
 });
 

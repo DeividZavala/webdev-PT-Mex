@@ -5,4 +5,12 @@ body {
 a {
   color: #00B7FF; }
 
+.container {
+  display: flex;
+  padding: 0 5%;
+  justify-content: space-between; }
+
+.container .bid-item {
+  margin: 0 1%; }
+
 /*# sourceMappingURL=style.css.map */
