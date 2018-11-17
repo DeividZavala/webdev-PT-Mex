@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fab99c4-a123-4b4a-9930-4161014f1bdc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Home/Corona.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Item.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -44,14 +41,14 @@
         <counts>
           <entry key="css" value="28" />
           <entry key="html" value="1" />
-          <entry key="js" value="1422" />
+          <entry key="js" value="1438" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="28" />
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="1422" />
+          <entry key="JavaScript" value="1438" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -106,10 +103,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Home/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="293">
               <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -136,11 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Home/Item.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+              <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -172,8 +169,8 @@
         <option value="$PROJECT_DIR$/src/components/Home/Selected.js" />
         <option value="$PROJECT_DIR$/src/components/Home/Home.module.css" />
         <option value="$PROJECT_DIR$/src/components/Home/Corona.js" />
-        <option value="$PROJECT_DIR$/src/components/Home/Item.js" />
         <option value="$PROJECT_DIR$/src/components/Home/Home.js" />
+        <option value="$PROJECT_DIR$/src/components/Home/Item.js" />
       </list>
     </option>
   </component>
@@ -266,12 +263,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542473446592</updated>
-      <workItem from="1542473450999" duration="6061000" />
+      <workItem from="1542473450999" duration="6294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6061000" />
+    <option name="totallyTimeSpent" value="6294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -284,7 +281,7 @@
       <window_info anchor="bottom" id="NativeScript" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3286517" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32862905" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -366,20 +363,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Home/Item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Home/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="293">
           <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Home/Item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
         </state>
       </provider>
     </entry>
