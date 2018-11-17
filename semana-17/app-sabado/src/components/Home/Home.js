@@ -28,11 +28,15 @@ class Home extends Component{
         }
     }
 
+    handleClick = (selection) => {
+        this.setState({selection})
+    };
+
     render(){
         return(
             <div className={styles.container}>
                 <ul>
-                    {this.state.data.map( (item,index) => <Item key={index} item={item}/> )}
+                    {this.state.data.map( (item,index) => <Item handleClick={this.handleClick} key={index} item={item}/> )}
                 </ul>
                 <div>
                     <Selected selection={this.state.selection}/>
