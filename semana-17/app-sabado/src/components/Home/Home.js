@@ -61,6 +61,15 @@ class Home extends Component{
         this.setState({form, dirty});
     };
 
+    handleSubmit = (e) => {
+        e.preventDefault();
+        let {form, dirty,data} = this.state;
+        data.push(form);
+        dirty = false;
+        form = {name:"", age: ""};
+        this.setState({form, dirty, data});
+    };
+
     render(){
         const {form,data, dirty} = this.state;
         return(
@@ -88,6 +97,7 @@ class Home extends Component{
                     <Form
                         dirty={dirty}
                         data={form}
+                        handleSubmit={this.handleSubmit}
                         handleChange={this.handleChange}/>
                 </div>
 
