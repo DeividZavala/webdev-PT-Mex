@@ -3,12 +3,18 @@ import Item from './Item';
 import Selected from './Selected';
 import styles from './Home.module.css';
 import Corona from "./Corona";
+import Form from "./Form";
+import './Form.css';
 
 class Home extends Component{
 
     constructor(){
         super();
         this.state = {
+            form: {
+                name: "",
+                age: ""
+            },
             show: false,
             selection: {
                 name: ""
@@ -46,24 +52,36 @@ class Home extends Component{
         this.setState({data});
     };
 
+    handleChange = (e) => {
+        const {form} = this.state;
+        let field = e.target.name;
+    };
+
     render(){
         return(
-            <div className={styles.container}>
-                <ul>
-                    {this.state.data.map( (item,index) => <Item
-                        deleteItem={this.deleteItem}
-                        handleClick={this.handleClick}
-                        key={index}
-                        index={index}
-                        item={item}/> )}
-                </ul>
-                <div>
-                    <Selected selection={this.state.selection}/>
+            <div>
+                <div className={styles.container}>
+                    <ul>
+                        {this.state.data.map( (item,index) => <Item
+                            deleteItem={this.deleteItem}
+                            handleClick={this.handleClick}
+                            key={index}
+                            index={index}
+                            item={item}/> )}
+                    </ul>
+                    <div>
+                        <Selected selection={this.state.selection}/>
+                    </div>
+
+                    <button onClick={this.toggleBlock} >Picale</button>
+
+                    {this.state.show ? <Corona/> : <div>No hay data</div>}
+
                 </div>
 
-                <button onClick={this.toggleBlock} >Picale</button>
-
-                {this.state.show ? <Corona/> : <div>No hay data</div>}
+                <div>
+                    <Form/>
+                </div>
 
             </div>
         )
