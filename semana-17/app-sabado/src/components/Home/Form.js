@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Form = ({handleChange}) => (
+const Form = ({handleChange, data, dirty}) => (
     <form className="form-container" >
 
         <label htmlFor="">
             Name:
             <input type="text" name="name" onChange={handleChange}/>
+            {data.name.length <= 3 && dirty ? <span>Hacen falta caracteres</span>: ""}
         </label>
         <label htmlFor="">
             Age:

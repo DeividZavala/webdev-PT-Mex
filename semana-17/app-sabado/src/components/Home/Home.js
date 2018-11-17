@@ -11,6 +11,7 @@ class Home extends Component{
     constructor(){
         super();
         this.state = {
+            dirty: false,
             form: {
                 name: "",
                 age: ""
@@ -53,18 +54,20 @@ class Home extends Component{
     };
 
     handleChange = (e) => {
-        let {form} = this.state;
+        let {form, dirty} = this.state;
         let field = e.target.name;
         form[field] = e.target.value;
-        this.setState({form});
+        dirty = true;
+        this.setState({form, dirty});
     };
 
     render(){
+        const {form,data, dirty} = this.state;
         return(
             <div>
                 <div className={styles.container}>
                     <ul>
-                        {this.state.data.map( (item,index) => <Item
+                        {data.map( (item,index) => <Item
                             deleteItem={this.deleteItem}
                             handleClick={this.handleClick}
                             key={index}
@@ -82,7 +85,10 @@ class Home extends Component{
                 </div>
 
                 <div>
-                    <Form handleChange={this.handleChange}/>
+                    <Form
+                        dirty={dirty}
+                        data={form}
+                        handleChange={this.handleChange}/>
                 </div>
 
             </div>
