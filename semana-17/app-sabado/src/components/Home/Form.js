@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Form = () => (
+const Form = ({handleChange}) => (
     <form className="form-container" >
 
         <label htmlFor="">
             Name:
-            <input type="text" name="name"/>
+            <input type="text" name="name" onChange={handleChange}/>
         </label>
         <label htmlFor="">
             Age:
-            <input type="number" step="1" name="age"/>
+            <input type="number" step="1" name="age" onChange={handleChange}/>
         </label>
         <button>Agregar papud</button>
 

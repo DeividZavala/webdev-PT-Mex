@@ -53,8 +53,10 @@ class Home extends Component{
     };
 
     handleChange = (e) => {
-        const {form} = this.state;
+        let {form} = this.state;
         let field = e.target.name;
+        form[field] = e.target.value;
+        this.setState({form});
     };
 
     render(){
@@ -80,7 +82,7 @@ class Home extends Component{
                 </div>
 
                 <div>
-                    <Form/>
+                    <Form handleChange={this.handleChange}/>
                 </div>
 
             </div>
