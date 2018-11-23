@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Router from './Router';
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import './App.css';
 
 class App extends Component {
@@ -23,8 +23,8 @@ class App extends Component {
       <div className="App">
 
           <nav>
-              <Link to="/" style={{marginRight: "2%"}}>Home</Link>
-              <Link to="/login">Login</Link>
+              <NavLink exact to="/" activeClassName="active-route">Home</NavLink>
+              <NavLink to="/login" activeClassName="active-route">Login</NavLink>
           </nav>
 
           <strong>{this.state.count}</strong>
