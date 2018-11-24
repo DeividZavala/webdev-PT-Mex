@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import ListItem from './ListItem';
 
 class Home extends Component{
 
@@ -23,7 +24,11 @@ class Home extends Component{
         return (
             <div>
                 <h4>Lista de posts</h4>
-                {posts.length > 0 ? <ul></ul> : <strong>No hay nada</strong>}
+                {posts.length > 0 ?
+                    <ul>
+                        {posts.map(post => <ListItem key={post._id} {...post} />) }
+                    </ul>
+                    : <strong>No hay nada</strong>}
             </div>
         );
     }
