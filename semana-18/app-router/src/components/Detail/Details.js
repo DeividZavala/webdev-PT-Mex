@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
-
+import axios from 'axios';
 class Detail extends Component{
 
     componentWillMount() {
         const base_url = 'https://swapi.co/api';
         const {id} = this.props.match.params;
-        fetch(`${base_url}/people/${id}`)
+        const url = `https://swapi.co/api/people/${id}`;
+        console.log(url);
+        fetch(base_url+"/people", {mode: "no-cors"})
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => console.log(data));
+
 
     }
 
