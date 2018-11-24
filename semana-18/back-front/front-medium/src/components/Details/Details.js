@@ -14,7 +14,6 @@ class Detail extends Component{
         const base_url = "http://localhost:3000/api";
         axios.get(`${base_url}/posts/${this.props.match.params.id}`)
             .then(res => {
-                console.log(res);
                 const {post} = res.data;
                 this.setState({post})
             })

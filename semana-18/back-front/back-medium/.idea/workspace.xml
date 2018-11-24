@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca182a2a-e8bc-4ebe-a059-f594c86ea647" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../front-medium/src/components/Home/ListItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/posts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front-medium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front-medium/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front-medium/src/components/Details/Details.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-medium/src/components/Details/Details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-medium/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-medium/src/components/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-medium/src/components/Form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-medium/src/components/Form/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-medium/src/components/Home/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-medium/src/components/Home/ListItem.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,7 +41,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/posts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
+            <state relative-caret-position="-1418">
               <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
             </state>
           </provider>
@@ -132,12 +131,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543076911175</updated>
-      <workItem from="1543076916203" duration="5012000" />
+      <workItem from="1543076916203" duration="5493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5012000" />
+    <option name="totallyTimeSpent" value="5493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -188,7 +187,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/posts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
+        <state relative-caret-position="-1418">
           <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
         </state>
       </provider>
