@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 
 class Form extends Component{
 
@@ -13,7 +14,19 @@ class Form extends Component{
         }
     }
 
-
+    handleSubmit = (e) => {
+        const base_url = "http://localhost:3000/api";
+        e.preventDefault();
+        const {form} = this.state;
+        axios.post(`${base_url}/posts`, form)
+            .then(() => {
+                this.props.history.push("/");
+            })
+            .catch(err => {
+                console.log(err);
+                alert(err.msg);
+            })
+    };
 
     handleChange = (e) => {
         const {form} = this.state;
@@ -25,7 +38,7 @@ class Form extends Component{
 
     render(){
         return(
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <div>
                     <label htmlFor="">
                         Titulo:
