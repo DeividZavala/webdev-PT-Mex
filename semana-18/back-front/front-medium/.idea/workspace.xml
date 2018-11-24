@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8224ad9-5f85-470a-b4ee-9cba33ef8547" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../back-medium/models/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back-medium/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-medium/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../back-medium/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../back-medium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back-medium/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back-medium/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back-medium/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/ListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-medium/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../back-medium/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-medium/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../back-medium/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back-medium/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back-medium/routes/auth.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Router.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="458">
@@ -111,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Home/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
+            <state relative-caret-position="409">
               <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -230,12 +227,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543081927378</updated>
-      <workItem from="1543081928848" duration="9412000" />
+      <workItem from="1543081928848" duration="10091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9412000" />
+    <option name="totallyTimeSpent" value="10091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -296,16 +293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Form/Form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1771">
@@ -338,10 +325,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Home/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
+        <state relative-caret-position="409">
           <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
