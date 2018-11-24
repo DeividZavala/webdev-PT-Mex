@@ -8,6 +8,7 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const cors         = require("cors");
 
 
 mongoose
@@ -29,6 +30,11 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// CORS
+app.use(cors({
+  origin: ["http://localhost:3001"]
+}));
 
 // Express View engine setup
 

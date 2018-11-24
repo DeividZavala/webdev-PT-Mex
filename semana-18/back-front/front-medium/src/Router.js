@@ -7,7 +7,7 @@ import Form from "./components/Form/Form";
 const Router = () => (
     <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/:id" component={Detail}/>
+        <Route exact path="/detail/:id" component={Detail}/>
         <Route exact path="/new" component={Form}/>
         <Route exact path="/:id/edit" component={Form}/>
     </Switch>
