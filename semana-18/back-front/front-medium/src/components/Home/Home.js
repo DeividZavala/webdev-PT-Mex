@@ -13,7 +13,11 @@ class Home extends Component{
     }
 
     componentWillMount() {
-        axios.get(`${this.base_url}/posts/`)
+        axios.get(`${this.base_url}/posts/`,{
+            headers: {
+                "x-access-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViZjlkNDUyNGYzZjVlNzJmYmIxYjFkNSIsImlhdCI6MTU0MzEwMjIwOCwiZXhwIjoxNTQzMTEwODA4fQ.EF2vak-Ll_ABo9IAU8K5hJ5guJsZ2Z8PB4NZ7ew3I8Q"
+            }
+        })
             .then(res => {
                 this.setState({posts: res.data.posts});
             })

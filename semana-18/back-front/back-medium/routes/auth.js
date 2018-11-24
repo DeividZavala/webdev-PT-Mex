@@ -19,6 +19,10 @@ router.post("/login", async (req, res) => {
         expiresIn: 8600
     });
 
+    delete user._doc.password;
+
+    console.log(user);
+
     res.status(200).json({user, token});
 
 });

@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const Post = require("../models/Post");
+const auth = require("../helpers/auth");
 
-router.get("/", (req, res) => {
+router.get("/",auth.verifyToken , (req, res) => {
     Post.find()
         .then(posts => {
             res.status(200).json({posts});
