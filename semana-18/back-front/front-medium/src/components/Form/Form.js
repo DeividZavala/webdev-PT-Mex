@@ -28,7 +28,6 @@ class Form extends Component{
                 this.props.history.push("/");
             })
             .catch(err => {
-                console.log(err);
                 alert(err.msg);
             })
     };
@@ -48,7 +47,6 @@ class Form extends Component{
         let field = e.target.name;
         form[field] = e.target.value;
         this.setState({form});
-        console.log(form);
     };
 
     render(){
