@@ -24,7 +24,7 @@ class Auth extends Component{
 
     handleSubmit = (e) => {
         e.preventDefault();
-        login(this.state.user)
+        login(this.state.user, this.props.history)
     };
 
     render(){
