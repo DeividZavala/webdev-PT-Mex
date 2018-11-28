@@ -15,7 +15,8 @@ const userSchema = new Schema({
     password:{
         type: String,
         required: true
-    }
+    },
+    profile_picture: String
 }, {
     timestamps: {
         createdAt: "created_at",

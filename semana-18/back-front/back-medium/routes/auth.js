@@ -3,6 +3,7 @@ const router = express.Router();
 const User = require("../models/User");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const upload = require("../helpers/multer");
 
 router.post("/login", async (req, res) => {
     const user = await User.findOne({email: req.body.email});
@@ -46,6 +47,21 @@ router.post("/register", (req, res) => {
             res.status(500).json({err, msg: "No se pudo crear"})
         })
 
+});
+
+router.patch("/:id",upload.single("picture"), (req, res) => {
+    let user = {};
+
+    Object.keys(req.body).forEach(key => {
+        user[key] = req.body[key];
+    });
+    if(req.file) user.profile_picture = req.file.url;
+
+
+    User.findByIdAndUpdate(req.params.id, {$set: user}, {new:true})
+        .then(user => {
+            res.status(200).json({user});
+        })
 });
 
 module.exports = router;
