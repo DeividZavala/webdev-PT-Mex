@@ -21,3 +21,19 @@ export const getPosts = (token) => {
         }
     })
 };
+
+export const updateUser = (id, form) => {
+    console.log(form);
+    let formData = new FormData();
+    Object.keys(form).forEach(key => {
+        formData.append(key, form[key]);
+    });
+    axios.patch(`${base_url}/auth/${id}`, formData, {
+        headers: {
+            "Content-Type": "multipart/form-data"
+        }
+    })
+        .then(user => {
+            console.log(user);
+        })
+};
